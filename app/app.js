@@ -13,6 +13,11 @@ const home = require("./src/routes/home");
 app.set('view engine', 'ejs'); 
 app.set('views', path.join(__dirname, './src/views')); 
 
+app.use(express.static(path.join(__dirname, './src/public')));
+//app.use(express.static('./src/public'));  // 이 방식도 작동함
+//app.use(express.static('${__dirname}'/src/public'));  // 강의에서 알려준 방식이나 작동 안함
+
+
 app.use("/", home); //use 는 미들웨어를 등록해주는 메서드
 
 // 앱 세팅
