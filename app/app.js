@@ -26,3 +26,4 @@ app.use("/", home); //use 는 미들웨어를 등록해주는 메서드
 //app.engine('html', require('ejs').renderFile);
 
 module.exports = app;
+
